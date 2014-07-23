@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Usage: execute.sh [WildFly mode] [configuration file]
+#
+# The default mode is 'standalone' and default configuration is based on the
+# mode. It can be 'standalone.xml' or 'domain.xml'.
+
 JBOSS_HOME=/opt/wildfly
 JBOSS_CLI=$JBOSS_HOME/bin/jboss-cli.sh
 JBOSS_MODE=${1:-"standalone"}
