@@ -1,0 +1,11 @@
+# Mark the commands below to be run as a batch
+batch
+
+# Add MySQL driver
+/subsystem=datasources/jdbc-driver=mysql:add(driver-name=mysql,driver-module-name=com.mysql.jdbc,driver-xa-datasource-class-name=com.mysql.jdbc.jdbc2.optional.MysqlXADataSource)
+
+# Add the datasource
+data-source add --name=UnifiedPushDS --driver-name=mysql --jndi-name=java:jboss/datasources/ExampleMySQLDS --connection-url=jdbc:mysql://localhost:3306/sample?useUnicode=true&amp;characterEncoding=UTF-8 --user-name=user --password=password --use-ccm=false --max-pool-size=25 --blocking-timeout-wait-millis=5000 --enabled=true
+
+# Execute the batch
+run-batch
