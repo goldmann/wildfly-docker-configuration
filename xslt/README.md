@@ -8,4 +8,3 @@ Example showing usage of XSLT transformation via `saxon` to modify the WildFly c
 
     docker run -it --rm wildfly-config-xslt
 
-Please note that the start of the server will fail, since the transformation didn't add 
