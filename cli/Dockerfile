@@ -1,7 +1,7 @@
 FROM jboss/wildfly
 
-ADD customization /opt/wildfly/customization/
-ADD modules /opt/wildfly/modules/
+ADD customization /opt/jboss/wildfly/customization/
+ADD modules /opt/jboss/wildfly/modules/
 
-RUN /opt/wildfly/customization/execute.sh
+RUN /opt/jboss/wildfly/customization/execute.sh
 
