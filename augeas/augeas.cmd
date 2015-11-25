@@ -1,5 +1,5 @@
 set /augeas/load/Xml/lens Xml.lns
-set /augeas/load/Xml/incl[2] /opt/wildfly/standalone/configuration/standalone.xml
+set /augeas/load/Xml/incl[2] /opt/jboss/wildfly/standalone/configuration/standalone.xml
 load
 defvar subsystem "/files/opt/wildfly/standalone/configuration/standalone.xml/server/profile/subsystem[#attribute/xmlns='urn:jboss:domain:logging:3.0']"
 set $subsystem/console-handler/level/#attribute/name "DEBUG"
